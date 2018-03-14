@@ -173,9 +173,9 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "You Win!";
+            res = "<span class='win'>Glückwunsch, Du hast gewonnen</span>";
         } else {
-            res = "You Lose";
+            res = "<span class='lose'>Du hast verloren</span>";
         }
         $('#result').html(res);
     }
