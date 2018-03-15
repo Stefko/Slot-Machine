@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/*
+     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * #
+     *                                                                       *
+     * project:       Slot Machine                                           *
+     * filename:      style.css                                              *
+     * created on:    15-03-2018 - 12:02:46 GMT+0100                         *
+     * last modified: 15-03-2018 - 12:02:46 GMT+0100                         *
+     *                                                                       *
+     * (c) 2018 Stefan 'Stefko' Kohler - eMail: stefko@lobsterlounge.de      *
+     *                                     web: http://www.lobsterlounge.de  *
+     *                                                                       *
+     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * #
+
+*/
+
+
+/* ====================================
+     Kapitel
+   ==================================== */
+
+
+/*     -- Abschnitt
+------------------------------------------------- */
+
+
+/* ~~~ Unterabschnitt */
+
+*:focus {
+	/* verhindert den blauen Schatten */
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+html {
+	height: 100%;
+	background: #f5f6f6;
+	background: linear-gradient(135deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 20px;
+}
+
+h1 {
+	margin: 10px 0 40px 20px;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+	font: normal 40px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+h1:first-line {
+	font-size: 75%;
+}
+
+.bd {
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+	height: 475px;
+	border: 2px solid #ccc;
+	border-bottom: 4px solid #ccc;
+	border-right: 4px solid #ccc;
+	background: rgba(212, 228, 239, 1);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 228, 239, 1)), color-stop(100%, rgba(134, 174, 204, 1)));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 228, 239, 1)), to(rgba(134, 174, 204, 1)));
+	background: linear-gradient(to bottom, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0);
+	/*	box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.5);*/
+	-webkit-box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
+	box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
+}
+
+.container {
+	margin: 0 auto;
+	width: 266px;
+}
+
+.slot-wrapper {
+	border: 1px solid #000000;
+	background: #fff;
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+	margin-bottom: 5px;
+}
+
+.slot {
+	background: url("../images/reel_normal.png") repeat-y;
+	/*Taken from http://www.swish-designs.co.uk*/
+	width: 86px;
+	height: 70px;
+	float: left;
+	border: 1px solid #000;
+	background-position: 0 4px;
+}
+
+.motion {
+	background: url("../images/reel_blur.png") repeat-y;
+	/*Taken from http://www.swish-designs.co.uk*/
+}
+
+button {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	margin: 10px auto;
+	margin-bottom: 20px;
+	color: red;
+	font-size: 28px;
+	text-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	border: 2px solid #333;
+	background: #fefcea;
+	background: radial-gradient(ellipse at center, #fefcea 0%, #f4f738 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f4f738', GradientType=1);
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+button:disabled {
+	color: #aaa;
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+button:active {
+	margin: 15px auto;
+	width: 140px;
+	height: 140px;
+	-webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+#result {
+	margin-top: 10px;
+	padding: 10px 0 20px 0;
+	font-size: 24px;
+	font-weight: bold;
+	height: 22px;
+	background: #fff;
+	border: 1px solid #999;
+}
+
+#result .win {
+	color: greenyellow
+}
+
+#result .lose {
+	color: red;
+}
+
+.credits {
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.credits .browsers {
+	font-style: italic;
+	font-size: 14px;
+	color: #777;
+	margin-top: 4px;
+}
+
+.clear {
+	clear: both;
+}
