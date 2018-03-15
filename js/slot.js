@@ -173,12 +173,23 @@ $(document).ready(function() {
     function printResult() {
         var res;
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
-            res = "<span class='win'>Glückwunsch, Du hast gewonnen</span>";
+            res = "<span class='win'>Du hast gewonnen</span>";
         } else {
             res = "<span class='lose'>Du hast verloren</span>";
         }
         $('#result').html(res);
     }
+	
+	function playSound() {
+        if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
+			document.getElementsByTagName("audio")[0].play();return false;
+        } else {
+			document.getElementsByTagName("audio")[1].play();return false;
+        }
+    }
+	
+	
+	
 
     //create slot objects
     var a = new Slot('#slot1', 30, 1),
@@ -221,6 +232,8 @@ $(document).ready(function() {
                     enableControl();
                     window.clearInterval(x);
                     printResult();
+					playSound();
+//					alert("Hello! I am an alert box!!");
                 }
             }, 100);
         } else { //reset

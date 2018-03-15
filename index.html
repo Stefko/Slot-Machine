@@ -1,172 +1,193 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Slot Machine in Javascript</title>
-<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan"> 
-<meta name="keywords" content="javascript, jquery, spritely, animation, sprite, background position, slot, game, games, saurabh, odhyan">
-<style>
-	
-	*:focus { /* verhindert den blauen Schatten */
-		outline: 0;
-		box-shadow:none;
-	}
-	
-	html {
-	height:100%;
-background: #f5f6f6;
-background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
-background: -webkit-linear-gradient(-45deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
-background: linear-gradient(135deg, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 );
-	}
-	
-body {
-	font-family:Helvetica, Arial, sans-serif;
-	padding:20px;
-}
-	
-	h1 {
-		margin:10px 0 40px 20px;
-		text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-		font: normal 50px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #fff;
-	}
-	
-	h1:first-line {
-  		font-size: 75%;
-	}
-	
-.bd {
-	margin:0 auto;
-	text-align:center;
-	width:300px;
-	height:450px;
-	border:2px solid #ccc;
-	border-bottom:4px solid #ccc;
-	border-right:4px solid #ccc;
-	background: rgba(212,228,239,1);
-	background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
-	background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
-	background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
-	background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
-	background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
-/*	box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.5);*/
-	box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
-}
-.container {
-	margin:0 auto;
-	width:266px;
-}
-.slot-wrapper {
-	border: 1px solid #000000;
-	background:#fff;
-	box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.25);
-	margin-bottom:5px;
-}
-.slot {
-	background:url("images/reel_normal.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-	width:86px;
-	height:70px;
-	float:left;
-	border:1px solid #000;
-	background-position:0 4px;
-}
-.motion {
-	background:url("images/reel_blur.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
-}
-	
-	button {
-		display:block;
-		width:150px;
-		height:150px;
-		border-radius: 100%;
-		margin:10px auto;
-		margin-bottom:20px;
-		font-size:28px;
-		cursor:pointer;
-		border:2px solid #333;
-		background: #fefcea;
-		background: -moz-radial-gradient(center, ellipse cover, #fefcea 0%, #f1da36 100%);
-		background: -webkit-radial-gradient(center, ellipse cover, #fefcea 0%,#f1da36 100%);
-		background: radial-gradient(ellipse at center, #fefcea 0%,#f1da36 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
-		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Slot Machine in Javascript</title>
+	<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+		*:focus {
+			/* verhindert den blauen Schatten */
+			outline: 0;
+			box-shadow: none;
+		}
+		
+		html {
+			height: 100%;
+			background: #f5f6f6;
+			background: -moz-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+			background: -webkit-linear-gradient(-45deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+			background: linear-gradient(135deg, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
+			filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6', GradientType=1);
+		}
+		
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			padding: 20px;
+		}
+		
+		h1 {
+			margin: 10px 0 40px 20px;
+			text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+			font: normal 40px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color: #fff;
+		}
+		
+		h1:first-line {
+			font-size: 75%;
+		}
+		
+		.bd {
+			margin: 0 auto;
+			text-align: center;
+			width: 300px;
+			height: 475px;
+			border: 2px solid #ccc;
+			border-bottom: 4px solid #ccc;
+			border-right: 4px solid #ccc;
+			background: rgba(212, 228, 239, 1);
+			background: -moz-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 228, 239, 1)), color-stop(100%, rgba(134, 174, 204, 1)));
+			background: -webkit-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+			background: -o-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+			background: -ms-linear-gradient(top, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+			background: linear-gradient(to bottom, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
+			filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0);
+			/*	box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.5);*/
+			box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
+		}
+		
+		.container {
+			margin: 0 auto;
+			width: 266px;
+		}
+		
+		.slot-wrapper {
+			border: 1px solid #000000;
+			background: #fff;
+			box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+			margin-bottom: 5px;
+		}
+		
+		.slot {
+			background: url("images/reel_normal.png") repeat-y;
+			/*Taken from http://www.swish-designs.co.uk*/
+			width: 86px;
+			height: 70px;
+			float: left;
+			border: 1px solid #000;
+			background-position: 0 4px;
+		}
+		
+		.motion {
+			background: url("images/reel_blur.png") repeat-y;
+			/*Taken from http://www.swish-designs.co.uk*/
+		}
+		
+		button {
+			display: block;
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
+			margin: 10px auto;
+			margin-bottom: 20px;
+			font-size: 28px;
+			cursor: pointer;
+			border: 2px solid #333;
+			background: #fefcea;
+background: -moz-radial-gradient(center, ellipse cover, #fefcea 0%, #f4f738 100%);
+background: -webkit-radial-gradient(center, ellipse cover, #fefcea 0%,#f4f738 100%);
+background: radial-gradient(ellipse at center, #fefcea 0%,#f4f738 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f4f738',GradientType=1 );
+			box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 			-webkit-transition: all 0.25s ease;
-    	transition: all 0.25s ease;
-	}
-	
-	button:active {
-		margin:15px auto;
-		width:140px;
-		height:140px;
-		box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.75);
+			transition: all 0.25s ease;
+		}
+		
+		button:active {
+			margin: 15px auto;
+			width: 140px;
+			height: 140px;
+			box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
 			-webkit-transition: all 0.25s ease;
-    	transition: all 0.25s ease;
-	}
-	
-#result {
-	margin-top:10px;
-	padding:10px 0 20px 0;
-	font-size:24px;
-	font-weight:bold;
-	height:22px;
-	background:#fff;
-	border:1px solid #999;
-}
-	
-	#result .win {
-		color:greenyellow
-	}
-	
-	#result .lose {
-		color:red;
-	}
-	
-.credits {
-	font-size:15px;
-	margin-top:20px;
-}
-.credits .browsers {
-	font-style:italic;
-	font-size:14px;
-	color:#777;
-	margin-top:4px;
-}
-.clear {
-	clear:both;
-}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="jquery.spritely.js"></script>
-<script src="jquery.backgroundPosition.js"></script>
-<script src="slot.js"></script>
+			transition: all 0.25s ease;
+		}
+		
+		#result {
+			margin-top: 10px;
+			padding: 10px 0 20px 0;
+			font-size: 24px;
+			font-weight: bold;
+			height: 22px;
+			background: #fff;
+			border: 1px solid #999;
+		}
+		
+		#result .win {
+			color: greenyellow
+		}
+		
+		#result .lose {
+			color: red;
+		}
+		
+		.credits {
+			font-size: 15px;
+			margin-top: 20px;
+		}
+		
+		.credits .browsers {
+			font-style: italic;
+			font-size: 14px;
+			color: #777;
+			margin-top: 4px;
+		}
+		
+		.clear {
+			clear: both;
+		}
+		
+		
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="js/jquery.spritely.js"></script>
+	<script src="js/jquery.backgroundPosition.js"></script>
+	<script src="js/slot.min.js"></script>
 </head>
 
 <body>
-<div class="hd">
-</div>
-<div class="bd">
-	<h1>Lobsterlounge<br>Slotmachine</h1>
-	<div class="container">
-		<div class="slot-wrapper">
-			<div id="slot1" class="slot"></div>
-			<div id="slot2" class="slot"></div>
-			<div id="slot3" class="slot"></div>
-			<div class="clear"></div>
-		</div>
-		<div id="result"></div>
-		<div><button id="control">Start</button></div>
+	<div class="hd">
 	</div>
-<!--
+	<div class="bd">
+		<h1>Stefkos<br>Groschengrab</h1>
+		<div class="container">
+			<div class="slot-wrapper">
+				<div id="slot1" class="slot"></div>
+				<div id="slot2" class="slot"></div>
+				<div id="slot3" class="slot"></div>
+				<div class="clear"></div>
+			</div>
+			<div id="result"></div>
+			<audio class="win" preload="auto">
+				<source src="audio/win.mp3">
+			</audio>
+			<audio class="lose" preload="auto">
+				<source src="audio/lose.mp3">
+			</audio>
+			<div>
+				<button id="control">Start</button>
+			</div>
+		</div>
+		<!--
 	<div><a href="https://instant-thinking.de/2014/09/15/mit-javascript-einen-simplen-webbasierten-spielautomaten-programmieren/">Learn how to build this</a></div>
 	<div class="credits">
 		<div>Author: <a href="http://odhyan.com/blog/">Saurabh Odhyan</a></div>
 		<div class="browsers">Tested in Firefox, Chrome and IE8</div>
 	</div>
 -->
-</div>
+	</div>
 </body>
+
 </html>
