@@ -13,35 +13,35 @@ $(document).ready(function() {
     * Global variables
     */
     var completed = 0,
-        imgHeight = 1374,
+        imgHeight = 1440,
         posArr = [
             0, //orange
             80, //number 7 
-            165, //bar
-            237, //guava
-            310, //banana
-            378, //cherry
-            454, //orange
-            539, //number 7
-            624, //bar
-            696, //guava
-            769, //banana
-            837, //cherry
-            913, //orange
-            1000, //number 7
-            1085, //bar
-            1157, //guava
-            1230, //banana
-            1298 //cherry
+            160, //bar
+            240, //guava
+            320, //banana
+            400, //cherry
+            480, //orange
+            560, //number 7
+            640, //bar
+            720, //guava
+            800, //banana
+            880, //cherry
+            960, //orange
+            1040, //number 7
+            1120, //bar
+            1200, //guava
+            1280, //banana
+            1360 //cherry
         ];
     
     var win = [];
-    win[0] = win[454] = win[913] = 1;
-    win[80] = win[539] = win[1000] = 2;
-    win[165] = win[624] = win[1085] = 3;
-    win[237] = win[696] = win[1157] = 4;
-    win[310] = win[769] = win[1230] = 5;
-    win[378] = win[837] = win[1298] = 6;
+    win[0]   = win[480] = win[960]  = 1;
+    win[80]  = win[560] = win[1040] = 2;
+    win[160] = win[640] = win[1120] = 3;
+    win[240] = win[720] = win[1200] = 4;
+    win[320] = win[800] = win[1280] = 5;
+    win[400] = win[880] = win[1360] = 6;
 
     /**
     * @class Slot

@@ -5,21 +5,31 @@
 	<title>Slot Machine in Javascript</title>
 	<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script>document.addEventListener("touchstart",function(){},!0)</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script src="js/jquery.spritely.js"></script>
 	<script src="js/jquery.backgroundPosition.js"></script>
-	<script src="js/slot.min.js"></script>
-	
-<script>
-
-</script>
+	<script src="js/slot.js"></script>
+	<script>
+		function soundOn() {
+//			// run on page load
+//			var button = document.getElementByTagName('button');
+//			var audio = document.getElementByTagName('audio');
+//	
+//			var onClick = function() {
+//				audio.play(); // audio will load and then play
+//			}	;
+//			button.addEventListener('click', onClick, false);
+		}
+	</script>
 
 
 </head>
 
-<body>
+<body onload="soundOn()">
+
+
 	<div class="hd">
 	</div>
 	<div class="bd">
@@ -42,14 +52,7 @@
 				<button id="control">Start</button>
 			</div>
 		</div>
-<!--
-	<div><a href="https://instant-thinking.de/2014/09/15/mit-javascript-einen-simplen-webbasierten-spielautomaten-programmieren/">Learn how to build this</a></div>
-	<div class="credits">
-		<div>Author: <a href="http://odhyan.com/blog/">Saurabh Odhyan</a></div>
-		<div class="browsers">Tested in Firefox, Chrome and IE8</div>
 	</div>
--->
-	</div>
-</body>
 
+</body>
 </html>
