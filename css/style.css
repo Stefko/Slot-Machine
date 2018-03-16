@@ -60,53 +60,39 @@ h1:first-line {
 	font-size: 75%;
 }
 
-.bd {
-	margin: 0 auto;
-	text-align: center;
-	width: 300px;
-	height: 475px;
-	border: 2px solid #ccc;
-	border-bottom: 4px solid #ccc;
-	border-right: 4px solid #ccc;
-	background: rgba(212, 228, 239, 1);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 228, 239, 1)), color-stop(100%, rgba(134, 174, 204, 1)));
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 228, 239, 1)), to(rgba(134, 174, 204, 1)));
-	background: linear-gradient(to bottom, rgba(212, 228, 239, 1) 0%, rgba(134, 174, 204, 1) 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0);
-	/*	box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.5);*/
-	-webkit-box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
-	box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15), 0 40px 40px rgba(0, 0, 0, .10);
-}
+
 
 .container {
+	position:relative;
 	margin: 0 auto;
-	width: 266px;
+	width: 432px;
+	min-height:213px;
+	background: url("../images/slotmachine-bg.png") no-repeat center center;
 }
 
 .slot-wrapper {
-	width:258px;
-	margin:0 auto;
-	border: 1px solid #000;
-	background: #ccc url("../images/slot-wrapper-bg.png") no-repeat center center;
-		-webkit-box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
-	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
-	border-radius: 4px;
-	margin-bottom: 5px;
+	position:relative;
+/*	width:312px;*/
+	top:83px;
+	left:46px;
+/*	background: #ff0;*/
 }
 
 .slot {
 	background: url("../images/reel_normal.png") repeat-y;
-	/*Taken from http://www.swish-designs.co.uk*/
 	width: 86px;
 	height: 90px;
 	float: left;
-/*	border: 1px solid #000;*/
 	background-position: 0 4px;
+	margin-right:27px;
+}
+
+#slot1 {
+	
 }
 
 .motion {
 	background: url("../images/reel_blur.png") repeat-y;
-	/*Taken from http://www.swish-designs.co.uk*/
 }
 
 button {
