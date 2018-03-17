@@ -76,6 +76,9 @@ $(document).ready(function() {
                 $(_this.el).spSpeed(_this.speed);
             }
         }, 100);
+		document.getElementsByTagName("audio")[2].play();return false;
+//		document.getElementsByTagName("audio")[2].play(loop = true);
+
     };
 
     /**
@@ -123,7 +126,7 @@ $(document).ready(function() {
         pos = pos.split(' ')[1];
         pos = parseInt(pos, 10);
 
-        for(i = 0; i < posArr.length; i++) {
+		for(i = 0; i < posArr.length; i++) {
             for(j = 0;;j++) {
                 k = posArr[i] + (imgHeight * j);
                 if(k > pos) {
@@ -182,8 +185,10 @@ $(document).ready(function() {
 	
 	function playSound() {
         if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
+			document.getElementsByTagName("audio")[2].pause();
 			document.getElementsByTagName("audio")[0].play();return false;
         } else {
+			document.getElementsByTagName("audio")[2].pause();
 			document.getElementsByTagName("audio")[1].play();return false;
         }
     }
@@ -200,6 +205,7 @@ $(document).ready(function() {
     * Slot machine controller
     */
     $('#control').click(function() {
+		
         var x;
         if(this.innerHTML == "Start") {
             a.start();
@@ -209,6 +215,8 @@ $(document).ready(function() {
             
             disableControl(); //disable control until the slots reach max speed
             
+//			
+			
             //check every 100ms if slots have reached max speed 
             //if so, enable the control
             x = window.setInterval(function() {
