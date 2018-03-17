@@ -6,6 +6,7 @@
 	<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe:300,400|Open+Sans:300,400" rel="stylesheet">
 	<script>document.addEventListener("touchstart",function(){},!0)</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script src="js/jquery.spritely.js"></script>
@@ -29,30 +30,45 @@
 
 <body onload="soundOn()">
 
+	<header>
+		<div class="sign"></div>
+		<div class="text">
+			<div class="welcome">
+				<span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span>
+			</div>
+			<div class="to">
+				<span>TO<br>THE</span>
+			</div>
+			<div class="fab">Fabulous</div>
+			<div class="las">Slot Machine</div>
+			<div class="nv">by STEFKO</div>
+		</div>
+	</header>
+	
+	<main>
+		<div class="wrapper">
+			<div class="container">
+				<div class="slot-wrapper">
+					<div id="slot1" class="slot"></div>
+					<div id="slot2" class="slot"></div>
+					<div id="slot3" class="slot"></div>
+					<div class="clear"></div>
+				</div>
 
-	<div class="hd">
-	</div>
-	<div class="bd">
-		<h1>Stefkos<br>Groschengrab</h1>
-		<div class="container">
-			<div class="slot-wrapper">
-				<div id="slot1" class="slot"></div>
-				<div id="slot2" class="slot"></div>
-				<div id="slot3" class="slot"></div>
-				<div class="clear"></div>
 			</div>
 			<div id="result"></div>
+			<div>
+				<button id="control">Start</button>
+			</div>
+			
 			<audio class="win" preload="auto">
 				<source src="audio/win.mp3">
 			</audio>
 			<audio class="lose" preload="auto">
 				<source src="audio/boring.mp3">
 			</audio>
-			<div>
-				<button id="control">Start</button>
-			</div>
 		</div>
-	</div>
-
+	</main>
+	
 </body>
 </html>
