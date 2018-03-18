@@ -286,6 +286,7 @@ button:disabled {
 	transition: all 0.25s ease;
 }
 
+/*
 button:active {
 	margin: 15px auto;
 	width: 140px;
@@ -295,6 +296,7 @@ button:active {
 	-webkit-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 }
+*/
 
 
 /* ====================================
@@ -303,15 +305,16 @@ button:active {
 
 footer {
 	width:100%;
-	background:rgba(255, 255, 255, 0.5);
+	background:rgba(220, 175, 20, 0.3);
+/*	background:rgba(255, 255, 255, 0.5);*/
 	text-align: center;
 	font-style: italic;
 /*	line-height:14px;*/
-	height: 30px;
-  	margin-top: -30px;
+	height: 20px;
+  	margin-top: -18px;
 	padding: 5px 0 0 0;
-		-webkit-box-shadow: 0 -3px 3px #999;
-	box-shadow: 0 -3px 3px #999;
+	-webkit-box-shadow: 0 -2px 0px rgba(220, 175, 20, 0.5);
+	box-shadow: 0 -2px 0px rgba(220, 175, 20, 0.5);
 }
 
 
@@ -340,4 +343,19 @@ main.lost h1 {
 /* ~~~ Clearfix */
 .clear {
 	clear: both;
+}
+
+/* ====================================
+     Responsive
+   ==================================== */
+
+@media (min-width:980px) and (max-width:1140px) {
+	
+}
+
+@media (max-height:765px) {
+	
+	footer {
+		margin-top:50px;
+	}
 }
