@@ -164,6 +164,9 @@ main:before {
 }
 
 main.lost:before {
+	margin-top: 0px;
+	height: 100vh;
+	width: 100vw;
 	background: url("../images/LasVegas-2.jpg") no-repeat top left;
 }
 
@@ -252,6 +255,27 @@ main.lost:before {
 
 
 /* ====================================
+     Links
+   ==================================== */
+
+a:link,
+a:visited {
+	color: #0261DF;
+	text-decoration: none;
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+a:hover,
+a:active {
+	color: #FF020D;
+	text-decoration: none;
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+
+/* ====================================
      Buttons
    ==================================== */
 
@@ -323,14 +347,45 @@ footer {
    ==================================== */
 
 main.lost {
+	margin-top:-100px;
+/*	height: 100%;*/
 	text-align: center;
 }
 
 main.lost h1 {
 	font-family: 'Mr Dafoe';
-	font-size:5rem;
+	font-size:7rem;
 	font-weight: 300;
-	color:#fff;
+	color:#eee;
+	text-shadow: -5px -5px 10px #ffCB3A, 5px 5px 10px #0261DF;
+/*	text-shadow:0 0 10px #ffCB3A, 0px 0px 20px #0261DF;*/
+}
+
+main.lost .back {
+	position: absolute;
+/*	top: 130px;*/
+	margin-top:130px;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%) rotate(-45deg) skew(20deg, 20deg);
+	transform: translate(-50%, -50%) rotate(-45deg) skew(20deg, 20deg);
+	width: 250px;
+	height: 250px;
+	background: #efefef;
+	-webkit-box-shadow: inset 0 0 0 10px #ffCB3A;
+	box-shadow: inset 0 0 0 10px #ffCB3A;
+	border: 5px dotted #E6D1b2;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+main.lost h2 {
+	font-family: 'Mr Dafoe';
+	font-size:4rem;
+	font-weight: 300;
+	text-shadow: 3px 3px 3px #ffCB3A;
+	margin:40px 0 0 5px;
+	-webkit-transform:rotate(45deg) skew(20deg,-20deg);
+	transform:rotate(45deg) skew(20deg,-20deg);
 }
 
 
