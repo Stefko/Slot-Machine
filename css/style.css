@@ -44,6 +44,9 @@ body {
      Las Vegas Sign
    ==================================== */
 
+header {
+	margin:0 auto;
+}
 
 .sign {
 	position: absolute;
@@ -62,7 +65,7 @@ body {
 }
 .text {
 	position: absolute;
-	top: 120px;
+	top: 118px;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
@@ -113,7 +116,7 @@ body {
 }
 .text .title {
 	position: relative;
-	top: -25px;
+	top: -20px;
 	left: 2px;
 	font-size: 50px;
 	font-weight: 600;
@@ -122,7 +125,7 @@ body {
 }
 .text .name {
 	position: relative;
-	top: -20px;
+	top: -12px;
 	left: 0;
 	font-size: 22px;
 	font-weight: 400;
@@ -137,6 +140,7 @@ body {
 
 main {
 	margin-top:260px;
+	min-height: calc(100vh - 287px);
 }
 
 
@@ -157,6 +161,10 @@ main:before {
 	-o-filter: blur(10px);
 	-ms-filter: blur(10px);
 	filter: blur(10px);
+}
+
+main.lost:before {
+	background: url("../images/LasVegas-2.jpg") no-repeat top left;
 }
 
 /* ~~~ Slotmachine */
@@ -201,7 +209,7 @@ main:before {
 	height:40px;
 	margin: 136px auto;
 	margin-bottom:0;
-	padding: 0 0 13px 20px;
+	padding: 5px 0 8px 20px;
 	font-family: 'Mr Dafoe';
 	text-align:left;
 	font-size: 36px;
@@ -226,7 +234,7 @@ main:before {
 	width: 40px;
     height: 40px;
     margin: -54px 55px 0 0;
-    padding: 3px 10px 6px 5px;
+    padding: 9px 10px 0 5px;
 	font-family: 'Mr Dafoe';
 	color:aliceblue;
 	text-align:center;
@@ -252,7 +260,7 @@ button {
 	display: block;
 	width: 150px;
 	height: 150px;
-	border-radius: 100%;
+	border-radius: 30%;
 	margin: 10px auto;
 	margin-bottom: 20px;
 	font-family: 'Mr Dafoe';
@@ -289,23 +297,45 @@ button:active {
 }
 
 
+/* ====================================
+     Footer
+   ==================================== */
+
+footer {
+	width:100%;
+	background:rgba(255, 255, 255, 0.5);
+	text-align: center;
+	font-style: italic;
+/*	line-height:14px;*/
+	height: 30px;
+  	margin-top: -30px;
+	padding: 5px 0 0 0;
+		-webkit-box-shadow: 0 -3px 3px #999;
+	box-shadow: 0 -3px 3px #999;
+}
+
+
+/* ====================================
+     Verloren Seite
+   ==================================== */
+
+main.lost {
+	text-align: center;
+}
+
+main.lost h1 {
+	font-family: 'Mr Dafoe';
+	font-size:5rem;
+	font-weight: 300;
+	color:#fff;
+}
+
+
 
 /* ====================================
      Diverses
    ==================================== */
 
-/* ~~~ Credits für Autor */
-.credits {
-	font-size: 15px;
-	margin-top: 20px;
-}
-
-.credits .browsers {
-	font-style: italic;
-	font-size: 14px;
-	color: #777;
-	margin-top: 4px;
-}
 
 /* ~~~ Clearfix */
 .clear {

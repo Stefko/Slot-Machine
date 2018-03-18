@@ -3,8 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Slot Machine in Javascript</title>
-	<meta name="description" content="Welcome to the Javascript version of Slot Machine written by Saurabh Odhyan">
+	<meta name="description" content="Eine Javascript Slot Machine, auf einem Ursprungsscript von Saurabh Odhyan basierend">
 	<meta name="viewport" content="width=device-width,initial-scale=0.75">
+	<meta property="og:url" content="https://lobsterlounge.de/slotmachine/index.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Stefkos Slot Machine" />
+	<meta property="og:description" content="Eine Slot Machine in Javascript, based on an Script by Saurabh Odhyan" />
+	<meta property="og:image" content="https://lobsterlounge.de/slotmachine/images/screenshot.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="872" />
+	<link rel="stylesheet" href="css/reset.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe:300,400|Open+Sans:300,400" rel="stylesheet">
 	<script>document.addEventListener("touchstart",function(){},!0)</script>
@@ -29,7 +37,6 @@
 </head>
 
 <body onload="soundOn()">
-
 	<header>
 		<div class="sign"></div>
 		<div class="text">
@@ -44,9 +51,7 @@
 			<div class="name">by STEFKO</div>
 		</div>
 	</header>
-
 	<main>
-
 		<div class="container">
 			<div class="slot-wrapper">
 				<div id="slot1" class="slot"></div>
@@ -55,14 +60,11 @@
 				<div class="clear"></div>
 			</div>
 			<div id="result"></div>
-			<div id="coins"></div>
+			<div id="coins" title="pro Spiel -5€, bei Gewinn +50€"></div>
 			<div>
 				<button id="control">Start</button>
 			</div>
 		</div>
-
-		
-
 		<audio class="win" preload="auto">
 			<source src="audio/win.mp3">
 		</audio>
@@ -72,9 +74,11 @@
 		<audio class="slot" preload="auto">
 			<source src="audio/slot-machine.mp3">
 		</audio>
-
 	</main>
-
+	<footer>
+	<div>
+		<a href="https://instant-thinking.de/2014/09/15/mit-javascript-einen-simplen-webbasierten-spielautomaten-programmieren/" target="_blank">Learn how to build this</a><br> Author: <a href="https://github.com/Stefko/Slot-Machine" target="_blank">Stefan Kohler</a>, based on an script of <a href="https://github.com/odhyan/slot" target="_blank">Saurabh Odhyan</a>
+	</div>
+</footer>
 </body>
-
 </html>
