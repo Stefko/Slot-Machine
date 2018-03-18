@@ -113,7 +113,7 @@ body {
 	line-height: 40px;
 	letter-spacing: 5px;
 }
-.text .las {
+.text .title {
 	position: relative;
 	top: -28px;
 	left: 8px;
@@ -122,7 +122,7 @@ body {
 	letter-spacing: 3px;
 	color: red;
 }
-.text .nv {
+.text .name {
 	position: relative;
 	top: -28px;
 	left: 0;
@@ -159,23 +159,26 @@ main:before {
 	filter: blur(10px);
 }
 
+/* ~~~ Slotmachine */
 .container {
 	position:relative;
 	margin: 0 auto;
 	width: 462px;
-	min-height:226px;
-	background: url("../images/slotmachine-bg.svg") no-repeat center center;
+/*	min-height:326px;*/
+	background: url("../images/slotmachine-bg.svg") no-repeat top center;
 }
 
+/* ~~~ Wrapper für Walzen */
 .slot-wrapper {
 	position:relative;
-/*	width:312px;*/
+	display:block;
 	top:96px;
 	left:76px;
-/*	background: #ff0;*/
 }
 
+/* ~~~ einzelne Walze */
 .slot {
+	display: inline-block;
 	background: url("../images/reel_normal.png") repeat-y;
 	width: 86px;
 	height: 90px;
@@ -192,6 +195,55 @@ main:before {
 	background: url("../images/reel_blur.png") repeat-y;
 }
 
+/* ~~~ Ergebnis Ausgabe */
+#result {
+	width:85%;
+	height:40px;
+	margin: 136px auto;
+	margin-bottom:0;
+	padding: 0 0 13px 20px;
+	font-family: 'Mr Dafoe';
+	text-align:left;
+	font-size: 36px;
+	font-weight: normal;
+	text-shadow: 3px 3px 3px rgb(68, 40, 24);
+	background: url("../images/result-bg.svg") repeat;
+	border: 3px solid rgb(68, 40, 24);
+	border-radius:10px;
+}
+
+#result .win {
+	color: greenyellow;
+}
+
+#result .lose {
+	color: red;
+}
+
+/* ~~~ verbleibendes Geld */
+#coins {
+	float:right;
+	width: 40px;
+    height: 40px;
+    margin: -54px 55px 0 0;
+    padding: 3px 10px 6px 5px;
+	font-family: 'Mr Dafoe';
+	color:aliceblue;
+	text-align:center;
+	font-size: 28px;
+	font-weight: normal;
+	text-shadow: 3px 3px 3px rgb(68, 40, 24);
+/*	background: rgba(255,0,0,0.5);*/
+	border-left: 3px solid rgba(68, 40, 24, 0.5);
+}
+
+#coins::before {
+	content: "€";
+	padding-right:10px;
+}
+
+
+/* ~~~ Strat, Stopp, Reset-Knopf */
 button {
 	display: block;
 	width: 150px;
@@ -232,29 +284,10 @@ button:active {
 	transition: all 0.25s ease;
 }
 
-#result {
-	width:360px;
-	height:40px;
-	margin: 0px auto;
-	padding: 0 0 10px 0;
-	font-family: 'Mr Dafoe';
-	text-align:center;
-	font-size: 36px;
-	font-weight: bold;
-	text-shadow: 3px 3px 3px rgb(68, 40, 24);
-	background: url("../images/result-bg.svg") repeat;
-	border: 3px solid rgb(68, 40, 24);
-	border-radius:10px;
-}
 
-#result .win {
-	color: greenyellow
-}
 
-#result .lose {
-	color: red;
-}
 
+/* ~~~ Credits für Autor */
 .credits {
 	font-size: 15px;
 	margin-top: 20px;
@@ -267,6 +300,7 @@ button:active {
 	margin-top: 4px;
 }
 
+/* ~~~ Clearfix */
 .clear {
 	clear: both;
 }
