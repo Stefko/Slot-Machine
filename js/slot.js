@@ -8,10 +8,16 @@
 *
 * Date: May 23, 2011 
 */
+
+
 $(document).ready(function() {
     /**
     * Global variables
     */
+	
+	var coins = 100;
+	$('#coins').html(coins);
+	
     var completed = 0,
         imgHeight = 1440,
         posArr = [
@@ -193,6 +199,21 @@ $(document).ready(function() {
         }
     }
 	
+	function calcCash() {
+		if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
+			coins = (coins + 50);
+        } else {
+			coins = (coins - 5);
+        }
+		$('#coins').html(coins);
+	}
+	
+	function lost() {
+		if(coins == 0) {
+			document.location.href = "lost.html";
+		}
+	}
+	
 	
 	
 
@@ -214,8 +235,7 @@ $(document).ready(function() {
             this.innerHTML = "Stop";
             
             disableControl(); //disable control until the slots reach max speed
-            
-//			
+            		
 			
             //check every 100ms if slots have reached max speed 
             //if so, enable the control
@@ -240,8 +260,10 @@ $(document).ready(function() {
                     enableControl();
                     window.clearInterval(x);
                     printResult();
+					calcCash();
 					playSound();
-//					alert("Hello! I am an alert box!!");
+					lost();
+//					window.alert(coins);
                 }
             }, 100);
         } else { //reset
