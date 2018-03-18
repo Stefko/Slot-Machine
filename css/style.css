@@ -79,12 +79,13 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-left: 17px;
+	margin-left: 5px;
 }
 .welcome span {
 	display: inline-block;
 	width: 22px;
 	height: 20px;
+	margin:2px;
 	padding: 10px;
 	font-size: 20px;
 	font-weight: bold;
@@ -92,8 +93,9 @@ body {
 	background: #EAE7DF;
 	border: 1px solid #DEC08C;
 	border-radius: 50%;
-	-webkit-box-shadow: 0px 5px 5px #5D646E;
-	box-shadow: 0px 5px 5px #5D646E;
+	-webkit-box-shadow: 0px 5px 5px #5D646E, inset 0 0 0 3px #ffCB3A;;
+	box-shadow: 0px 5px 5px #5D646E, inset 0 0 0 3px #ff993A;;
+
 }
 .text .to {
 	position: relative;
@@ -115,8 +117,8 @@ body {
 }
 .text .title {
 	position: relative;
-	top: -28px;
-	left: 8px;
+	top: -25px;
+	left: 5px;
 	font-size: 50px;
 	font-weight: 600;
 	letter-spacing: 3px;
@@ -124,11 +126,11 @@ body {
 }
 .text .name {
 	position: relative;
-	top: -28px;
+	top: -20px;
 	left: 0;
 	font-size: 22px;
-	font-weight: 600;
-	letter-spacing: 5px;
+	font-weight: 400;
+	letter-spacing: 3px;
 }
 
 
