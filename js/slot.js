@@ -208,6 +208,12 @@ $(document).ready(function() {
 		$('#coins').html(coins);
 	}
 	
+	function lost() {
+		if(coins == 0) {
+			document.location.href = "lost.html";
+		}
+	}
+	
 	
 	
 
@@ -256,6 +262,7 @@ $(document).ready(function() {
                     printResult();
 					calcCash();
 					playSound();
+					lost();
 //					window.alert(coins);
                 }
             }, 100);
