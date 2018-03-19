@@ -1,3 +1,4 @@
-A javascript implementation of Slot Machine using jQuery
+Javascript Slot Machine
 
-For more details, see http://odhyan.com/blog/2011/05/slot-machine-in-javascript/
+Eine Glückspielautomaten Umsetzung unter Verwendung von jquery.
+Basierend auf einem Script von https://github.com/odhyan/slot
